@@ -1793,8 +1793,6 @@ function combatModule(bot, mcData) {
   bot.on("health", () => {
     if (!config.combat["auto-eat"]) return;
     try {
-      addLog(`[AutoEat] Hunger: ${bot.food}`);
-addLog(`[AutoEat] Inventory: ${bot.inventory.items().map(i => i.name).join(", ")}`);
       if (bot.food < 14) {
         const food = bot.inventory
           .items()
