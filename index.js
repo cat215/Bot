@@ -1796,7 +1796,7 @@ function combatModule(bot, mcData) {
       if (bot.food < 14) {
         const food = bot.inventory
           .items()
-          .find((i) => i.foodPoints && i.foodPoints > 0);
+          .find((i) => mcData.foodsByName[i.name]);
         if (food) {
           bot
             .equip(food, "hand")
